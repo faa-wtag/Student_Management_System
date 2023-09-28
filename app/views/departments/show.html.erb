@@ -1,0 +1,9 @@
+<h1> Showing Department Details  </h1>
+
+<div>
+  Department name:  <%= @department.dept_name %> <br>
+  Department code: <%= @department.dept_code %> <br>
+  
+</div>
+
+<%= link_to "All Departments List", departments_path %> | <%= link_to "edit", edit_department_path(@department)  %>

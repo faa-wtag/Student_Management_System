@@ -1,0 +1,10 @@
+<h1> Showing Details of <%= @user.name  %>  </h1>
+
+<div>
+  Full name:  <%= @user.name %> <br>
+  email: <%= @user.email %> <br>
+  phone: <%= @user.phone %> <br>
+  role: <%= @user.role %> <br>
+</div>
+
+<%= link_to "All Users List", users_path %> | <%= link_to "edit", edit_user_path(@user)  %>

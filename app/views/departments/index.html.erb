@@ -1,0 +1,28 @@
+<h1> List of all Department </h1>
+
+<table>
+    <thead> 
+        <tr>
+        <th>Department Name</th>
+        <th>Department Code</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @departments.each do |dept|  %>
+            <tr>    
+                <td> <%= dept.dept_name %> </td>
+                <td> <%= dept.dept_code %> </td>
+
+                <td> <%= link_to "details", dept  %> </td>
+                <td> <%= link_to "edit", edit_department_path(dept)  %> </td>
+                <td> <%= link_to "delete", dept,  data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %> </td>
+
+
+
+            </tr>
+        <% end %>
+    
+    </tbody>
+
+</table>

@@ -1,0 +1,10 @@
+<h1> Course Details  </h1>
+
+<div>
+  Course name:  <%= @course.course_title %> <br>
+  Course ID: <%= @course.id %> <br>
+  Course code: <%= @course.course_code %> <br>
+  
+</div>
+
+<%= link_to "All Course List", courses_path %> | <%= link_to "edit", edit_course_path(@course)  %>
