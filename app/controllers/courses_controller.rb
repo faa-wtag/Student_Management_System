@@ -12,8 +12,9 @@ class CoursesController < ApplicationController
   
   def create
     @course = Course.new(course_params)
+    binding.pry
 
-    if @course.save  
+    if @course.save!  
         redirect_to courses_path
     else
       render :new
@@ -46,7 +47,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-   params.require(:course).permit(:course_title, :course_code)
+   params.require(:course).permit(:course_title, :course_code, :department_id)
   end 
 
 

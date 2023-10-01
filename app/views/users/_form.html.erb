@@ -1,4 +1,10 @@
 <%= form_with model: user do |form| %>
+ <% if user.errors.any? %>
+  <% user.errors.full_messages.each do |message| %>
+    <p> <%= message %> </p>
+  <% end %>
+<% end %>
+
 <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
@@ -9,9 +15,21 @@
     <%= form.text_field :email %>
 </div>
 
+<div> 
+    <%= form.label :password %><br>
+    <%= form.text_field :password %>
+</div>
+
 <div>
     <%= form.label :phone %><br>
     <%= form.text_field :phone %>
+</div>
+
+
+<div>
+    <%= form.label :department_id %><br>
+    <%= form.select  :department_id ,  options_for_select(Department.ids)%>
+    
 </div>
 
 

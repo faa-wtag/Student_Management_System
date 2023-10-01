@@ -11,6 +11,12 @@
 
 
 <div>
+    <%= form.label :department_id %><br>
+    <%= form.select  :department_id ,  options_for_select(Department.ids)%>
+    
+</div>
+
+<div>
     <%= form.submit %>
 </div>
 
