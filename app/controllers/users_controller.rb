@@ -10,11 +10,13 @@ class UsersController < ApplicationController
   end
   
   def create
-    binding.pry
+    #@department = Department.find(params[:department_id])
+    #binding.pry
     @user = User.new(user_params)
-    binding.pry
+    #@user.department_id = @department.id
+    #binding.pry
     if @user.save!  
-      binding.pry
+      #binding.pry
       redirect_to users_path
     else
       render :new

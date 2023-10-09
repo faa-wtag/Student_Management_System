@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let!(:user) { FactoryBot.create(:user, :student) }
-
+  #binding.pry
   describe "when creating a user" do
     it 'has a valid factory' do
-      #binding.pry
+  
       expect(user).to be_valid
     end
  

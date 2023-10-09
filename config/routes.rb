@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # resources :users do
+  #   resources :departments, shallow: true
+  # end
   resources :users
   resources :departments 
   resources :courses

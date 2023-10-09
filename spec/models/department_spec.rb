@@ -14,7 +14,7 @@ RSpec.describe Department, type: :model do
       it { should validate_presence_of (:dept_code) }
 
       it { should_not allow_value('').for(:dept_name)}
-      #it { should_not allow_value('').for(:name) }
+   
       it { should_not allow_value('').for(:dept_code)}
 
       #associations testing
